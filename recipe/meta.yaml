@@ -1,7 +1,7 @@
 {% set name = "ragel" %}
-{% set version = "6.7" %}
+{% set version = "6.8" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "46df8e3f117a730f8896061c95ea8e8f53e9789cb053c2eea047833724fd7a30" %}
+{% set hash_val = "dd7f7d22f3a58147379bda61334d341c2caa0caf9f71897e3e4ec05c8f398764" %}
 
 package:
   name: {{ name }}
@@ -12,9 +12,7 @@ source:
   url: https://www.colm.net/files/{{ name }}/{{ name }}-{{ version }}.tar.gz
   {{ hash_type }}: {{ hash_val }}
   patches:
-    # Fix compiler errors (unqualified lookup of 'compare' and 'setiosflags' functions).
-    # Source: https://trac.macports.org/browser/trunk/dports/lang/ragel?rev=94741&order=name
-    - patches/cxx_syntax.patch
+    - patches/0001-Fix-undeclared-setiosflags-function.patch
 
 build:
   number: 0
