@@ -1,7 +1,7 @@
 {% set name = "ragel" %}
-{% set version = "6.9" %}
+{% set version = "6.10" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "6e07be0fab5ca1d9c2d9e177718a018fc666141f594a5d6e7025658620cf660a" %}
+{% set hash_val = "5f156edb65d20b856d638dd9ee2dfb43285914d9aa2b6ec779dac0270cd56c3f" %}
 
 package:
   name: {{ name }}
