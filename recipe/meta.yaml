@@ -8,7 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{version }}.tar.gz
+  fn: {{ name }}-{{ version }}.tar.gz
   url: https://www.colm.net/files/{{ name }}/{{ name }}-{{ version }}.tar.gz
   {{ hash_type }}: {{ hash_val }}
   patches:
