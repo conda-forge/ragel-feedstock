@@ -1,1 +1,2 @@
-{}
+cxx_compiler:
+- toolchain_cxx
