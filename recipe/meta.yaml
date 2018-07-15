@@ -15,7 +15,7 @@ source:
     - patches/0001-Fix-undeclared-setiosflags-function.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
