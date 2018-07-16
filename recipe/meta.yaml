@@ -8,19 +8,19 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{version }}.tar.gz
+  fn: {{ name }}-{{ version }}.tar.gz
   url: https://www.colm.net/files/{{ name }}/{{ name }}-{{ version }}.tar.gz
   {{ hash_type }}: {{ hash_val }}
   patches:
     - patches/0001-Fix-undeclared-setiosflags-function.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
-    - toolchain
+    - {{ compiler("cxx") }}
 
 about:
   home: https://www.colm.net/open-source/ragel/
