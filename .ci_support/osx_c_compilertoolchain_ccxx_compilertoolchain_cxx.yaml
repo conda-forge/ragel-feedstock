@@ -2,6 +2,8 @@ MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 build_number_decrement:
 - '1000'
+c_compiler:
+- toolchain_c
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -13,7 +15,8 @@ macos_machine:
 macos_min_version:
 - '10.9'
 zip_keys:
-- - cxx_compiler
+- - c_compiler
+  - cxx_compiler
   - channel_sources
   - channel_targets
   - build_number_decrement
