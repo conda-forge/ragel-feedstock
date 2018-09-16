@@ -15,12 +15,17 @@ source:
     - patches/0001-Fix-undeclared-setiosflags-function.patch
 
 build:
-  number: 1
+  number: 1002
   skip: True  # [win]
 
 requirements:
   build:
+    - {{ compiler("c") }}
     - {{ compiler("cxx") }}
+
+test:
+  requires:
+    - {{ compiler("c") }}
 
 about:
   home: https://www.colm.net/open-source/ragel/

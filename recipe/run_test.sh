@@ -28,7 +28,7 @@ EOF
 
 ragel -Cs testprog.rl
 
-gcc testprog.c -o testprog
+eval "${CC} testprog.c -o testprog"
 
 OUTPUT=$(./testprog rttr)
 
